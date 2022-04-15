@@ -8,7 +8,7 @@ def on_message(client,userdata,message):
     print(msg_payload)    
     kafka_producer.produce(msg_payload)
      
-kafka_client= KafkaClient(hosts='localhost:9092')
+kafka_client= KafkaClient(hosts='localhost:29092')
 kafka_topic = kafka_client.topics['test_topic']
 kafka_producer = kafka_topic.get_sync_producer()
 
